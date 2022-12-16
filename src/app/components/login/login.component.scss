@@ -1,0 +1,17 @@
+.login-container {
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    form {
+        mat-form-field {
+            width: 100%;
+        }
+        .submit-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

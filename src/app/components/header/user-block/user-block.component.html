@@ -1,0 +1,9 @@
+<button *ngIf="userDetails$.firstName" class="user-image" mat-icon-button [matMenuTriggerFor]="userMenu"><img [src]="userDetails$.image"></button>
+<mat-menu #userMenu="matMenu">
+    <div class="user-details-block">
+        <img [src]="userDetails$.image">
+        <h4>{{userDetails$.firstName + ' ' + userDetails$.lastName}}</h4>
+        <mat-chip-list><mat-chip>{{userDetails$.email}}</mat-chip></mat-chip-list>
+        <button mat-stroked-button (click)="logout()">Logout</button>
+    </div>
+</mat-menu>

@@ -1,0 +1,25 @@
+<div class="login-container">
+    <h1>
+        Life is what you do!
+    </h1>
+    <div>
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <mat-form-field>
+                        <mat-label>Username</mat-label>
+                        <input matInput type="text" formControlName="username" placeholder="Ex: jessica">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" formControlName="password">
+                    </mat-form-field>
+                    <div class="submit-block">
+                        <button mat-flat-button type="submit" color="primary" [disabled]="!loginForm.valid">LOGIN</button>
+                        <mat-spinner *ngIf="loader" diameter="30" color="primary"></mat-spinner>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

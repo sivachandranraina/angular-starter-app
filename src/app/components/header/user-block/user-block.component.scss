@@ -1,0 +1,23 @@
+.user-image {
+    img {width: 100%; height: 100%; border-radius: 50%;}
+}
+
+.user-details-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 15px;
+    h4 {
+        margin-bottom: 0px;
+    }
+    img {
+        background-color: lightgray;
+        width: 72px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+    button {
+        margin-top: 15px;
+    }
+}
