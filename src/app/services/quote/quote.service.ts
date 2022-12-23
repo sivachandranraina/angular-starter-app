@@ -6,11 +6,11 @@ import { API_URL } from 'src/app/utils';
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
+export class QuoteService {
   constructor(private http: HttpClient) {}
 
-  authUser(payload: any): Observable<any> {
-    const url = `${API_URL}/auth/login`;
-    return this.http.post(url, payload);
+  getQuote(): Observable<any> {
+    const url = `${API_URL}/quotes/random`;
+    return this.http.get<any>(url);
   }
 }

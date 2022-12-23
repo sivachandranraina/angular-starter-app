@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Product } from 'src/app/model/product.model';
-import { ProductsService } from 'src/app/services/products/products.service';
-import { addToCart } from 'src/app/store/cart/cart.actions';
+import { QuoteService } from 'src/app/services/quote/quote.service';
 
 @Component({
   selector: 'app-home',
@@ -10,17 +7,13 @@ import { addToCart } from 'src/app/store/cart/cart.actions';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  products: Product[] = [];
+  quote: any = {};
 
-  constructor(private productsService: ProductsService, private store: Store) {}
+  constructor(private quoteService: QuoteService) {}
 
   ngOnInit(): void {
-    this.productsService.getProducts().subscribe((data) => {
-      this.products = data.products;
+    this.quoteService.getQuote().subscribe((data) => {
+      this.quote = data;
     });
-  }
-
-  addToCart(data: Product) {
-    this.store.dispatch(addToCart({ payload: data }));
   }
 }

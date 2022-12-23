@@ -29,6 +29,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { UserBlockComponent } from './components/header/user-block/user-block.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProductsComponent } from './components/products/products.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { LoginComponent } from './components/login/login.component';
     AboutComponent,
     UserBlockComponent,
     LoginComponent,
+    ProductsComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { enableTracing: true }),

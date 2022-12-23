@@ -1,0 +1,16 @@
+.spacing {
+    margin: 10px;
+    .mat-card-image {
+        max-height: 150px;
+        width: 100%;
+    }
+    .mat-card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        .price {
+            font-size: 19px;
+        }
+    }
+}

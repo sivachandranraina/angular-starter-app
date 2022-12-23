@@ -8,6 +8,16 @@ export const reducers = {
   authState: authReducer,
 };
 
+// Reset the reducer state on logout
+const clearState = (reducer: any) => {
+  return function (state: undefined, action: { type: any }) {
+    if (action.type === '[Auth User] remove') {
+      state = undefined;
+    }
+    return reducer(state, action);
+  };
+};
+
 const localStorageSyncReducer = (
   reducer: ActionReducer<any>
 ): ActionReducer<any> => {
@@ -16,4 +26,5 @@ const localStorageSyncReducer = (
 
 export const presistor: Array<MetaReducer<any, any>> = [
   localStorageSyncReducer,
+  clearState,
 ];

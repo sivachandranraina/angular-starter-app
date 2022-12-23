@@ -3,6 +3,7 @@
     <div *ngIf="userDetails$.firstName" class="menu-section">
         <div>
             <a mat-button routerLink="/">Home</a>
+            <a mat-button routerLink="/products">Products</a>
             <a mat-button routerLink="/about">About</a>
             <a mat-button><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart" [matBadge]="cartLength" matBadgeColor="accent"></mat-icon></a>
         </div>

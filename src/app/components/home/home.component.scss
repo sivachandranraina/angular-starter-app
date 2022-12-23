@@ -1,6 +1,21 @@
 .spacing {
     margin: 10px;
-    .mat-card-footer {
-        padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        text-align: center;
+        max-width: 75vw;
+        &.quote {
+            margin-bottom: 0px;
+            font-size: 32px;
+        }
+    }
+    h3{
+        small {
+            color: gray;
+        }
     }
 }
